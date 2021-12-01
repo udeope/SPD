@@ -2,22 +2,27 @@
 <html>
 <head>
 <style>
+	body {
+		font-size: small;
+		margin-left: 20px;
+		margin-right: 20px;
+	}
 .list {
 	list-style-type: none;
 }
 li{
-	margin-top: 7px;
+	margin-top: 3px;
 }
 .data {
 	font-weight: bold;
 }
 #firmas {
   margin-top: 65px;
-  margin-left: 30px;
+  margin-left: 10px;
   float: left;
 }
 table {
-	width: 97%;
+	width: 99%;
 }
 td{
 	text-align: center;
@@ -25,14 +30,18 @@ td{
 .imagenFirma{
 	margin-left: 50px;
 }
+img{
+	max-width: 45%;
+    height: auto;
+}
 </style>
 </head>
 <body>
-<div style="width: 90%; margin: 0 7.5%;">
+<div style="width: 100%;">
 	<div style="text-align: center;">
-		<h3>DOCUMENTO DE AUTORIZACIÓN Y CONSENTIMIENTO INFORMADO DEL SERVICIO DE SEGUIMIENTO FARMACOTERAPÉUTICO CON SISTEMAS PERSONALIZADOS DE DOSIFICACIÓN(SPD)</h5>
+		<h4>DOCUMENTO DE AUTORIZACIÓN Y CONSENTIMIENTO INFORMADO DEL SERVICIO DE SEGUIMIENTO FARMACOTERAPÉUTICO CON SISTEMAS PERSONALIZADOS DE DOSIFICACIÓN(SPD)</h5>
 	</div>
-	<form style="margin-top: 45px; margin-left: -20px">
+	<form>
 		<ul class="list">
 		<li class="data">Farmacéutico titular: <%= farmacia.titular %></li>
 		<li class="data">Dirección: <%= farmacia.direction %></li>
@@ -42,7 +51,7 @@ td{
 		<li class="data">IBAN (Opcional): <%= farmacia.iban %></li>
 		</ul>
 	</form>
-	<article style="margin-top: 45px;">
+	<article >
 		<p style="margin-left: 20px;"> Declaro que:</p>
 		<ul style="text-align: justify;margin-right: 30px">
 			<li>Deseo  participar  en  el  programa  de  sistemas  personalizados  de  dosificación  de  la  farmacia  (SPD)  y  que  el servicio se inicia a petición mía y se llevará a cabo en tanto permanezca este acuerdo.</li>
@@ -71,9 +80,9 @@ td{
 			</th>
 		</tr>
 		<tr >
-			<td class="imagenFirma"><img src="<%= sign.png %>" alt="Firma">Firma</td>
-			<td class="imagenFirma"><img src="<%= sign.png %>" alt="Firma">Firma</td>
-			<td class="imagenFirma"><img src="<%= sign.png %>" alt="Firma">Firma</td>
+			<td class="imagenFirma"><img src="data:image/png;base64,<%= farmacia.base64 %>" alt="firma">
+			<td class="imagenFirma"><img src="data:image/png;base64,<%= farmacia.base64 %>" alt="firma">
+			<td class="imagenFirma"><img src="data:image/png;base64,<%= farmacia.base64 %>" alt="firma">
 		</tr>
 	</section>
 </div>
