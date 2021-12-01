@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* .firmas {
+  margin-top: 45px;
+  display: flex;
+} */
+.list {
+	list-style-type: none;
+}
+li{
+	margin-top: 7px;
+}
+.data {
+	font-weight: bold;
+}
+</style>
+</head>
+<body>
+<div style="width: 90%; margin: 0 7.5%;">
+	<div style="text-align: center;">
+	<h3>DOCUMENTO DE AUTORIZACIÓN Y CONSENTIMIENTO INFORMADO DEL SERVICIO DE SEGUIMIENTO FARMACOTERAPÉUTICO CON SISTEMAS PERSONALIZADOS DE DOSIFICACIÓN(SPD)</h5>
+</div>
+	<form style="margin-top: 45px; margin-left: -20px">
+		<ul class="list">
+		<li class="data">Farmacéutico titular: <%= farmacia.titular %></li>
+		<li class="data">Dirección: <%= farmacia.direction %></li>
+		<li class="data">Nombre y Apellidos: <%= farmacia.fullName %></li>
+		<li class="data">D.N.I: <%= farmacia.dni %></li>
+		<li class="data">Nº tarjeta sanitaria: <%= farmacia.tarjetaSanitaria %></li>
+		<li class="data">IBAN (Opcional): <%= farmacia.iban %></li>
+		</ul>
+	</form>
+	<article style="margin-top: 45px;">
+		<p style="margin-left: 20px;"> Declaro que:</p>
+		<ul style="text-align: justify;margin-right: 30px">
+			<li>Deseo  participar  en  el  programa  de  sistemas  personalizados  de  dosificación  de  la  farmacia  (SPD)  y  que  el servicio se inicia a petición mía y se llevará a cabo en tanto permanezca este acuerdo.</li>
+			<li>He leído y entendido toda la información de la Guía de seguimiento farmacoterapéutico con sistemas de SPD que se me ha proporcionado en la hoja de información del servicio o, en su defecto, las explicaciones recibidas a tal fin.</li>
+			<li>Entiendo que dicho programa consiste en el acondicionamiento de la medicación en un sistema de dosificación personalizada</li>
+			<li>Por eso, autorizo al Farmacéutico Titular a que me proporcione el servicio de seguimiento farmacoterapéutico y que me prepare la medicación en un sistema personalizado de dosificación (SPD). </li>
+			<li>Para  el  buen  funcionamiento  del  servicio,  quedan  autorizados  a  registrar  los  datos  necesarios  personales,clínicos y farmacoterapéuticos, de los que no se hará ningún otro uso sin mi consentimiento explícito</li>
+			<li>Dejo  en  depósito  a  la  farmacia  mi  medicación  previamente  dispensada,  que  quedará  convenientemente almacenada, custodiada y conservada por el farmacéutico, con el fin de recibir el servicio mencionado</li>
+			<li>Presentaré  a  la  farmacia  y/o  a  los  responsables  de  la  gestión  del  servicio,  con  suficiente  antelación,  la prescripción médica que avale un cambio en la medicación o avisaré de cualquier otra circunstancia que pueda modificar las condiciones iniciales de mi tratamiento/li>
+			<li>Sé que me puedo dar de baja libremente de la prestación de este servicio (SPD) en cualquier momento, sin que ello repercuta en mi atención farmacéutica, médica y sanitaria</li>
+			<li> Autorizo al farmacéutico a compartir con el médico que me trata la información sobre la medicación que tomo</li>
+			<li>Mediante la firma del presente documento, el  usuario consiente expresamente que sus datos personales de carácter identificativo y aquellas adquisiciones de productos a crédito y, en su caso, al contado efectuadas por el usuario en esta oficina de farmacia puedan ser tratados con la finalidad de emitir factura</li>
+			<li>De  conformidad  con  el  Reglamento  (UE)  General  de  Protección  de  Datos  (679/2016)  y  la  Ley  Orgánica  de Protección de Datos y Garantía de Derechos Digitales (3/2018) se identifica como a responsable del tratamiento al Farmacéutico Titular. La finalidad del mismo será prestar los servicios solicitados y enviar comunicaciones comerciales. La  legitimación del  tratamiento consiste  en  la ejecución de un contrato y el  interés  legítimo  del responsable.  Están  previstas  cesiones  de  datos  a:  Administración  Tributaria,  Entidades  financieras.  Tiene derecho  a  acceder,  rectificar,  oponerse,  portar,  limitar  y  suprimir  los  datos  que  puede  ejercer  dirigiéndose  a ____________________________________________o al domicilio social. Procedencia: El propio interesado. Puede consultar información adicional sobre protección de datos en ____________________________________________.</li>
+		</ul> 
+	</article>
+	<div style="display: flex; margin-top: 40px;">
+		<div> Fdo.: D/Dª <%= farmacia.firmaPaciente %></div>
+		<div> Fdo.: Representante (opcional) <%= farmacia.firmaPaciente %></div>
+		<div> Fdo.: Farmacéutico titular <%= farmacia.firmaFarmaceutico %></div>
+	</div>
+</div>
+</body>
+</html>
+
