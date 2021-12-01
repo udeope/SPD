@@ -11,11 +11,10 @@ let farmacia = {
 	dni: "478946",
 	tarjetaSanitaria: "123456",
 	iban: "987654321",
-	firmaPaciente: "pepito",
-	firmaFarmaceutico: "juanito",
+	base64: "pepito",
 	};
 	
-
+app.use(express.static("sign"));
 
 app.get("/generateReport", (req, res) => {
 	ejs.renderFile(path.join(__dirname, './views/', "report-template.ejs"), {

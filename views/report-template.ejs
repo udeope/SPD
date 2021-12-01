@@ -2,10 +2,6 @@
 <html>
 <head>
 <style>
-/* .firmas {
-  margin-top: 45px;
-  display: flex;
-} */
 .list {
 	list-style-type: none;
 }
@@ -15,13 +11,27 @@ li{
 .data {
 	font-weight: bold;
 }
+#firmas {
+  margin-top: 65px;
+  margin-left: 30px;
+  float: left;
+}
+table {
+	width: 97%;
+}
+td{
+	text-align: center;
+}
+.imagenFirma{
+	margin-left: 50px;
+}
 </style>
 </head>
 <body>
 <div style="width: 90%; margin: 0 7.5%;">
 	<div style="text-align: center;">
-	<h3>DOCUMENTO DE AUTORIZACIÓN Y CONSENTIMIENTO INFORMADO DEL SERVICIO DE SEGUIMIENTO FARMACOTERAPÉUTICO CON SISTEMAS PERSONALIZADOS DE DOSIFICACIÓN(SPD)</h5>
-</div>
+		<h3>DOCUMENTO DE AUTORIZACIÓN Y CONSENTIMIENTO INFORMADO DEL SERVICIO DE SEGUIMIENTO FARMACOTERAPÉUTICO CON SISTEMAS PERSONALIZADOS DE DOSIFICACIÓN(SPD)</h5>
+	</div>
 	<form style="margin-top: 45px; margin-left: -20px">
 		<ul class="list">
 		<li class="data">Farmacéutico titular: <%= farmacia.titular %></li>
@@ -48,11 +58,24 @@ li{
 			<li>De  conformidad  con  el  Reglamento  (UE)  General  de  Protección  de  Datos  (679/2016)  y  la  Ley  Orgánica  de Protección de Datos y Garantía de Derechos Digitales (3/2018) se identifica como a responsable del tratamiento al Farmacéutico Titular. La finalidad del mismo será prestar los servicios solicitados y enviar comunicaciones comerciales. La  legitimación del  tratamiento consiste  en  la ejecución de un contrato y el  interés  legítimo  del responsable.  Están  previstas  cesiones  de  datos  a:  Administración  Tributaria,  Entidades  financieras.  Tiene derecho  a  acceder,  rectificar,  oponerse,  portar,  limitar  y  suprimir  los  datos  que  puede  ejercer  dirigiéndose  a ____________________________________________o al domicilio social. Procedencia: El propio interesado. Puede consultar información adicional sobre protección de datos en ____________________________________________.</li>
 		</ul> 
 	</article>
-	<div style="display: flex; margin-top: 40px;">
-		<div> Fdo.: D/Dª <%= farmacia.firmaPaciente %></div>
-		<div> Fdo.: Representante (opcional) <%= farmacia.firmaPaciente %></div>
-		<div> Fdo.: Farmacéutico titular <%= farmacia.firmaFarmaceutico %></div>
-	</div>
+	<table id="firmas">
+		<tr>
+		 	<th> 
+				Fdo.: D/Dª 
+			</th>
+		 	<th>
+				Fdo.: Representante (opcional) 
+			</th>
+			<th> 
+				Fdo.: Farmacéutico titular
+			</th>
+		</tr>
+		<tr >
+			<td class="imagenFirma"><img src="<%= sign.png %>" alt="Firma">Firma</td>
+			<td class="imagenFirma"><img src="<%= sign.png %>" alt="Firma">Firma</td>
+			<td class="imagenFirma"><img src="<%= sign.png %>" alt="Firma">Firma</td>
+		</tr>
+	</section>
 </div>
 </body>
 </html>
